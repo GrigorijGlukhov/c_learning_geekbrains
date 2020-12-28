@@ -18,7 +18,7 @@ int main( int argc, const char* argv[] )
     R1 = R2 * Uo / (Ui - Uo);
     R2 = (Ui - Uo) * R1 / Uo;*/
 
-    // 2. Terms 0..100
+    // 2. Terms 0..100 Chack if number match range 
     printf("Tier 2\n");
     const int RANGE_MIN = 0;
     const int RANGE_MAX = 100;
@@ -32,7 +32,7 @@ int main( int argc, const char* argv[] )
     else
         printf("Bigger than %d\n", RANGE_MAX);
 
-    // 3. Loops
+    // 3. Loops. Calculate mean of 10 numbers from user input
     printf("Tier 3\n");
     int result = 0;
     int counter = 0, count = 10;
@@ -43,7 +43,7 @@ int main( int argc, const char* argv[] )
     }
     printf("Result is :%.2f\n", (float)(result / count));
 
-    // 4. Start
+    // 4. Star. Build triangle with lines form user input
     printf("Tier 4\n");
     int lines;
     printf("Enter a number of lines: ");
