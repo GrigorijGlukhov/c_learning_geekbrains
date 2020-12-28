@@ -8,22 +8,56 @@
 
 int main( int argc, const char* argv[] )
 {
-    int a = 10;
-    int b = 20;
-    int even = 0;
-    while ( a < b ) {
-        if ( a % 2 == 0 )
-            even++;
-        a++;
-    }
-    printf("There are %d even numbers in sequence\n", even);
+    // Homeworks
+    // 1. Uo = Ui * (R1 / (R2 + R1))
+  /*int Ui;
+    int Uo;
+    int R1;
+    int R2;
+    Ui = Uo * (R1 + R2) / R1;
+    R1 = R2 * Uo / (Ui - Uo);
+    R2 = (Ui - Uo) * R1 / Uo;*/
 
+    // 2. Terms 0..100
+    printf("Tier 2\n");
+    const int RANGE_MIN = 0;
+    const int RANGE_MAX = 100;
     int input;
-    do {
-        printf("Enter a divider for 100 (not zero)\n");
+    printf("Enter number from %d to %d: ", RANGE_MIN, RANGE_MAX);
+    scanf("%d", &input);
+    if (input >= RANGE_MIN && input <= RANGE_MAX)
+        printf("Number %d in renge from 0 to %d\n", input, RANGE_MAX);
+    else if ( input < RANGE_MIN )
+        printf("Less than %d\n", RANGE_MIN);
+    else
+        printf("Bigger than %d\n", RANGE_MAX);
+
+    // 3. Loops
+    printf("Tier 3\n");
+    int result = 0;
+    int counter = 0, count = 10;
+    while((counter++) < count) {
+        printf("Enter number %d: ", counter);
         scanf("%d", &input);
-    } while ( input == 0 );
-    printf("100 / %d = %d\n", input, 100 / input);
-    printf("and the reminder will be %d, by the way\n",100 % input);
+        result += input;
+    }
+    printf("Result is :%.2f\n", (float)(result / count));
+
+    // 4. Start
+    printf("Tier 4\n");
+    int lines;
+    printf("Enter a number of lines: ");
+    scanf("%d", &lines);
+    int i, j;
+    for (i = 0; i < lines; i++) {
+        for (j = 1; j < lines - i; j++)
+            printf(" ");
+
+        for (j = lines - i * 2; j <= lines; j++)
+            printf("^");
+
+        printf("\n");
+    }
+
     return 0;
 }
